@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="style2.css" />
+</head>
+<body>
+  <main class="page-container">
+    <section class="card">
+      <header class="card-head">
+        <h1>Registration Form</h1>
+        
+      </header>
+
+      <form id="registerForm" novalidate>
+        <div class="row">
+          <div class="field">
+            <label for="firstName">First name</label>
+            <input id="firstName" name="firstName" type="text" placeholder="Atul" required />
+            <small class="error" data-for="firstName"></small>
+          </div>
+
+          <div class="field">
+            <label for="lastName">Last name</label>
+            <input id="lastName" name="lastName" type="text" placeholder="Gurjar" />
+            <small class="error" data-for="lastName"></small>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" />
+            <small class="error" data-for="email"></small>
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone number</label>
+            <input id="phone" name="phone" type="tel" placeholder="‪+91 XXXXXXXXXX‬"
+            <small class="error" data-for="phone"></small>
+          </div>
+        </div>
+        <p class="muted small">Provide at least one: Email or Phone number.</p>
+
+        <div class="field">
+          <label for="website">Website</label>
+          <input id="website" name="website" type="url" placeholder="https://example.com" />
+          <small class="error" data-for="website"></small>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="password">Password</label>
+            <div class="pwd-wrapper">
+              <input id="password" name="password" type="password" placeholder="Create a strong password" required />
+              <button type="button" class="pwd-toggle" aria-label="Toggle password visibility">👁</button>
+            </div>
+            <meter id="pwdStrength" min="0" max="4" value="0"></meter>
+            <small class="muted">Use at least 8 characters, mix of letters, numbers & symbols.</small>
+            <small class="error" data-for="password"></small>
+          </div>
+
+          <div class="field">
+            <label for="confirmPassword">Retype password</label>
+            <input id="confirmPassword" name="confirmPassword" type="password" placeholder="Retype password" required />
+            <small class="error" data-for="confirmPassword"></small>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="btn-primary">submit</button>
+        </div>
+      </form>
+
+      <footer class="card-foot">
+        <p class="muted">By creating an account you agree to our <a href="#">Terms</a> and <a href="#">Privacy</a>.</p>
+      </footer>
+    </section>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  </main>
+
+  <script src="script2.js"></script>
+</body>
+</html>
